@@ -1,8 +1,7 @@
-﻿using System.Configuration;
+﻿using CrudOperationsAngularJsWithMVC.Models;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using CrudOperationsAngularJsWithMVC.Models;
 
 namespace CrudOperationsAngularJsWithMVC.database_Access_Layer
 {
