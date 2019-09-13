@@ -14,5 +14,5 @@ namespace CrudOperationsAngularJsWithMVC.Models
         public string Address { get; set; }
         public string City { get; set; }
     }
-    //https://www.youtube.com/watch?v=S18LT5q7ygw
+    
 }
