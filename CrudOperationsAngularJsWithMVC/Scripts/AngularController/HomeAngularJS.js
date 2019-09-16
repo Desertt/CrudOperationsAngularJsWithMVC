@@ -1,7 +1,5 @@
 ﻿var app = angular.module("Homeapp", []);
 
-
-
 app.controller("HomeController", function ($scope, $http) {
 
     $scope.btntext = "Save";
@@ -20,7 +18,7 @@ app.controller("HomeController", function ($scope, $http) {
 
             data: $scope.register
 
-        }).success(function (d) {
+        }).success(function(d) {
 
             $scope.btntext = "Save";
 
@@ -28,70 +26,13 @@ app.controller("HomeController", function ($scope, $http) {
 
             alert(d);
 
-        }).error(function () {
+        }).error(function() {
 
-            alert('Failed');
-
-        });
-
-    };
-
-   
-
-    // Delete record
-
-    $scope.deleterecord = function (id) {
-
-        $http.get("/Home/delete_record?id=" + id).then(function (d) {
-
-            alert(d.data);
-
-            $http.get("/Home/Get_data").then(function (d) {
-
-                $scope.record = d.data;
-
-            }, function (error) {
-
-                alert('Failed');
-
-            });
-
-        }, function (error) {
-
-            alert('Failed');
+            alert('aa');
 
         });
 
     };
-
-    // Update record
-
-    $scope.updatedata = function () {
-
-        $scope.btntext = "Please Wait..";
-
-        $http({
-
-            method: 'POST',
-
-            url: '/Home/update_record',
-
-            data: $scope.register
-
-        }).success(function (d) {
-
-            $scope.btntext = "Update";
-
-            $scope.register = null;
-
-            alert(d);
-
-        }).error(function () {
-
-            alert('Failed');
-
-        });
-
-    };
+    
 
 });
